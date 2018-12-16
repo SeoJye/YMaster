@@ -22,8 +22,14 @@
 	CommentsDAO dao = new CommentsDAO();
 	dao.insertComment(vo);
 	
-	if(str.equals("R"))	response.sendRedirect("restaurant.jsp");
-	else if(str.equals("D")) response.sendRedirect("delivery.jsp");
+	if(member.getRole() == 1) {
+		if(str.equals("R"))	response.sendRedirect("adminRestaurant.jsp");
+		else if(str.equals("D")) response.sendRedirect("adminDelivery.jsp");
+	}
+	else {
+		if(str.equals("R"))	response.sendRedirect("restaurant.jsp");
+		else if(str.equals("D")) response.sendRedirect("delivery.jsp");
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

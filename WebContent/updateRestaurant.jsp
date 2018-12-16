@@ -28,18 +28,19 @@
 	<div align="right">
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
-	<h2>맛집 마스터</h2><hr>
+	
 	<div align="center">
-		<h2>글 등록</h2>
+	<h2>맛집 마스터</h2><hr>
+		<h2>글 수정</h2>
 		<br>
 		<form action="updateRestaurantProc.jsp?seq=<%= vo.getSeq() %>" method="post">
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
-					<td bgcolor="#ccffcc" width="120">가게 이름</td>
+					<th bgcolor="#ccffcc" width="120">가게 이름</th>
 					<td align="left"><input style="width:99%" name="name" type="text" value="<%=vo.getName() %>" /></td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">종류</td>
+					<th bgcolor="#ccffcc">종류</th>
 					<td align="left">
 						<select name="type">
 							<option value="t0">선택</option>
@@ -72,7 +73,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">위치</td>
+					<th bgcolor="#ccffcc">위치</th>
 					<td align="left">
 						<select name="locate">
 							<option value="l0">선택</option>
@@ -110,23 +111,23 @@
 					</td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">상세 위치</td>
+					<th bgcolor="#ccffcc">상세 위치</th>
 					<td align="left"><input style="width:99%" name="address" type="text" value="<%=vo.getAddress() %>"/></td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">가격</td>
+					<th bgcolor="#ccffcc">가격</th>
 					<td align="left"><input style="width:30%" name="price" type="text" value="<%=vo.getPrice() %>"/></td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">평점 (0 ~ 10)</td>
+					<th bgcolor="#ccffcc">평점 (0 ~ 10)</th>
 					<td align="left"><input style="width:10%" name="rate" type="text" value="<%=vo.getRate() %>"/></td>
 				</tr>
 				<tr>
-					<td bgcolor="#ccffcc">내용</td>
+					<th bgcolor="#ccffcc">내용</th>
 					<td align="left"><textarea name="content" cols="40" rows="10"><%=vo.getContent() %></textarea></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="새글등록" /></td>
+					<td colspan="2" align="center"><input type="submit" value="글 수정" /></td>
 				</tr>
 			</table>
 		

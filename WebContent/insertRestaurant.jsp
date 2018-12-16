@@ -17,14 +17,14 @@
 	<div align="right">
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
-	<h2>맛집 마스터</h2><hr>
 	<div align="center">
+	<h2>맛집 마스터</h2><hr>
 		<h2>글 등록</h2>
 		<br>
 		<form action="insertRestaurantProc.jsp" method="post">
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
-					<td bgcolor="#ccffcc" width="120">가게 이름</td>
+					<th bgcolor="#ccffcc" width="120">가게 이름</th>
 					<td align="left"><input style="width:99%" name="name" type="text" /></td>
 				</tr>
 				<tr>

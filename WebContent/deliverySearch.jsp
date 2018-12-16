@@ -175,8 +175,8 @@
 		<% } %>
 		
 		<br>
-		<input type="button" style="width:20%; height:20pt;" value="새글 등록" onclick="location.href='insertDelivery.jsp'"/>
-		<input type="button" style="width:20%; height:20pt;" value="메인으로" onclick="location.href='main.jsp'"/>
+		<input type="button" style="background-color:#ccccff; width:30%; height:20pt;" value="새글 등록" onclick="location.href='insertDelivery.jsp'"/>
+		<input type="button" style="background-color:#ccccff; width:30%; height:20pt;" value="메인으로" onclick="location.href='main.jsp'"/>
 	</div>
 </body>
 </html>

@@ -24,11 +24,11 @@
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
 	<div align="center" style='line-height:170%'>
-	<h3>버스 마스터</h3><hr>
-		<form>
-			<input type="button"  value ="시내 셔틀 위치" onclick = "location.href='busLocation.jsp'"> <br>
-			<input type="button"  value ="시내/시외 셔틀 시간표" onclick = "location.href='busSchedule.jsp'"> <br>
-			<input type="button"  value ="메인으로" onclick = "location.href='main.jsp'">
+	<h3>셔틀 마스터</h3><hr>
+		<form style='line-height:170%'>
+			<input type="button" style="background-color:#ffffe0; width:150pt;" value ="시내 셔틀 위치" onclick = "location.href='busLocation.jsp'"> <br>
+			<input type="button" style="background-color:#ffffe0; width:150pt;" value ="시내/시외 셔틀 시간표" onclick = "location.href='busSchedule.jsp'"> <br>
+			<input type="button" style="background-color:#ffffe0; width:150pt;" value ="메인으로" onclick = "location.href='main.jsp'">
 		</form>
 	</div>
 </body>

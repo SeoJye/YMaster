@@ -36,7 +36,7 @@
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
 	<div align="center" style='line-height:170%'>
-		<h2>버스 마스터</h2><hr>
+		<h2>셔틀 마스터</h2><hr>
 		<h3>시내/시외 셔틀 시간표</h3><hr>
 		
 		<hr><h3>시내</h3><hr>
@@ -44,7 +44,7 @@
 		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="400">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일</th>
+					<th colspan="4" align="center" bgcolor="ffffe0">평일</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList1) { %>
 				<tr>
@@ -85,7 +85,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="400">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">주말</th>
+					<th colspan="4" align="center" bgcolor="ffffe0">주말</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList2) { %>
 				<tr>
@@ -126,7 +126,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="400">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">방학평일</th>
+					<th colspan="4" align="center" bgcolor="ffffe0">방학평일</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList3) { %>
 				<tr>
@@ -168,7 +168,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 강남행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 강남행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList4) { %>
 				<tr>
@@ -195,7 +195,7 @@
 				<tr>
 					<td>평일</td>
 					<td>강남행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -211,7 +211,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 잠실행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 잠실행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList5) { %>
 				<tr>
@@ -238,7 +238,7 @@
 			<tr>
 					<td>평일</td>
 					<td>잠실행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -253,7 +253,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 영등포행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 영등포행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList6) { %>
 				<tr>
@@ -280,7 +280,7 @@
 			<tr>
 					<td>평일</td>
 					<td>영등포행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -295,7 +295,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 성남/분당행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 성남/분당행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList7) { %>
 				<tr>
@@ -322,7 +322,7 @@
 			<tr>
 					<td>평일</td>
 					<td>성남/분당행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -337,7 +337,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 일산행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 일산행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList8) { %>
 				<tr>
@@ -364,7 +364,7 @@
 			<tr>
 					<td>평일</td>
 					<td>일산행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -379,7 +379,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 인천행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 인천행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList9) { %>
 				<tr>
@@ -406,7 +406,7 @@
 			<tr>
 					<td>평일</td>
 					<td>인천행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -421,7 +421,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 안양행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 안양행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList10) { %>
 				<tr>
@@ -448,7 +448,7 @@
 			<tr>
 					<td>평일</td>
 					<td>안양행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -463,7 +463,7 @@
    		<form method="post" action="insertBusScheduleProc.jsp">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<th colspan="3" align="center" bgcolor="ffffe0">평일 강북행</th>
+					<th colspan="5" align="center" bgcolor="ffffe0">평일 강북행</th>
 				</tr>
 				<% for(BusScheduleVO vo : bsList11) { %>
 				<tr>
@@ -490,7 +490,7 @@
 			<tr>
 					<td>평일</td>
 					<td>강북행</td>
-					<td><input type="hidden" size="20" name="content"/></td>
+					<td><input type="text" size="20" name="content"/></td>
 					<td><input type="text" size="10" name="time"/></td>
 					<td><input type="submit" style="height:20pt;" value="등록"/></td>
 				</tr>
@@ -500,7 +500,8 @@
 			<input type="hidden" name="week" value="평일"/>
   			</form>
    		</div>
-   		<input type="button" style="width:20%; height:20pt;" value="메인으로" onclick="location.href='main.jsp'"/>
+   		<br>
+   		<input type="button" style="background-color:#ffffe0; width:50%; height:20pt;" value="메인으로" onclick="location.href='adminMain.jsp'"/>
 	</div>
 </body>
 </html>

@@ -25,7 +25,7 @@
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
 	<div align="center" style='line-height:170%'>
-		<h2>버스 마스터</h2><hr>
+		<h2>셔틀 마스터</h2><hr>
 		<h3>시내 셔틀 위치</h3><hr>
 		
 		<div align="center" style='line-height:170%'>
@@ -88,7 +88,7 @@
 				</tr>
 			</table>
 		</div>
-		<input type="button" style="width:20%; height:20pt;" value="메인으로" onclick="location.href='main.jsp'"/>
+		<input type="button" style="background-color:#ffffe0; width:150pt; height:20pt;" value="메인으로" onclick="location.href='main.jsp'"/>
 	</div>
 </body>
 </html>

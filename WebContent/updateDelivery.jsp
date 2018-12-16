@@ -27,9 +27,9 @@
 	<div align="right">
 		<h4><%= mvo.getName()%>  <a href="logoutProc.jsp">logout</a> </h4>
 	</div>
-	<h2>배달 마스터</h2><hr>
 	<div align="center">
-		<h2>글 등록</h2>
+	<h2>배달 마스터</h2><hr>
+		<h2>글 수정</h2>
 		<br>
 		<form action="updateDeliveryProc.jsp?seq=<%= vo.getSeq() %>" method="post">
 			<table border="1" cellpadding="0" cellspacing="0">
@@ -108,7 +108,7 @@
 					<td align="left"><textarea name="content" cols="40" rows="10"><%=vo.getContent() %></textarea></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><input type="submit" value="새글등록" /></td>
+					<td colspan="2" align="center"><input type="submit" value="글 수정" /></td>
 				</tr>
 			</table>
 		
