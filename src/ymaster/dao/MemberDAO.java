@@ -40,6 +40,31 @@ public class MemberDAO {
 		return member;
 	}
 	
+	public MemberVO getMemberId(String name) throws SQLException {
+		String sql = "select * from member where name = ?";
+		MemberVO member = null;
+		
+		try {
+			conn = JDBCUtil.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, name);
+			rs = stmt.executeQuery();
+			
+			if(rs.next()) {
+				member = new MemberVO();
+				member.setId(rs.getString("id"));
+				member.setPassword(rs.getString("password"));
+				member.setName(rs.getString("name"));
+				member.setRole(rs.getInt("role"));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, stmt, rs);
+		}
+		return member;
+	}
+	
 	public int login(String id, String password) throws SQLException {
 		String sql = "select password from member where id = ?";
 		

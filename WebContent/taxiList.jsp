@@ -29,26 +29,26 @@ TaxiDAO dao = new TaxiDAO();
 	<h2>택시 마스터</h2><hr>
 
 
-<form action="taxiList.jsp" method="post">
+<form action="taxiSearch.jsp" method="post">
 	 출발
 	<select name ="startingS">
-		<option value="시청">시청</option>
+		<option value="용인시청">용인시청</option>
 		<option value="명지대사거리">명지대 사거리</option>
 		<option value="이약국">이약국</option>
 		<option value="CGV">CGV</option>
-		<option value="터미널">터미널</option>
-		<option value="학교">학교</option>
+		<option value="용인터미널">용인터미널</option>
+		<option value="용인대학교">용인대학교</option>
 	</select>		
 	-> 도착
 	<select name ="destinationS">
-		<option value="시청">시청</option>
+		<option value="용인시청">용인시청</option>
 		<option value="명지대사거리">명지대 사거리</option>
 		<option value="이약국">이약국</option>
 		<option value="CGV">CGV</option>
-		<option value="터미널">터미널</option>
-		<option value="학교">학교</option>
+		<option value="용인터미널">용인터미널</option>
+		<option value="용인대학교">용인대학교</option>
 	</select>
-	   <input type="button" style="height:20pt;" value="검색" onclick="location.href='taxiSearch.jsp'"/>	
+	   <input type="submit" style="height:20pt;" value="검색"/>	
 <table border="1" cellpadding="0" cellspacing="0" width="700">
 
 
@@ -82,8 +82,6 @@ TaxiDAO dao = new TaxiDAO();
 </table>
 </form>
 <br>
-
-		<input type="button" style="height:20pt;" value="로그아웃" onclick="location.href='logout.jsp'"/>
 </div>
 </body>
 </html>

@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="ymaster.dao.RouteShareDAO" %>
 <%@ page import="ymaster.vo.RouteShareVO" %>
+<%@ page import="ymaster.vo.MemberVO" %>
+<%@ page import="ymaster.dao.MemberDAO" %>
 <%@ page import = "java.io.PrintWriter" %>
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -12,10 +14,16 @@
 	
 	RouteShareVO vo = new RouteShareVO();
 	vo.setTitle(title);
-	vo.setWriter(writer);
 	vo.setContent(content);
 	vo.setPassword(Integer.parseInt(password));
 	
+	MemberDAO mdao = new MemberDAO();
+	MemberVO member = new MemberVO();
+	
+	member.setName(writer);
+	member = mdao.getMemberId(writer);
+	
+	vo.setWriter(member.getId());
 	RouteShareDAO dao = new RouteShareDAO();
 	dao.insertRouteShare(vo);
 	

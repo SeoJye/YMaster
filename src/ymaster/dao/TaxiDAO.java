@@ -44,6 +44,43 @@ public class TaxiDAO {
 		}return taxi;
 		
 	}
+	
+	public List<TaxiVO> getSearchTaxiList(TaxiVO vo) throws SQLException
+	{		
+		List<TaxiVO> taxi = new ArrayList<TaxiVO>();
+		try
+		{
+			String sql = " select * from taxi where starting=? AND destination=? " ;
+			
+			System.out.print("JAVA"+vo.getStarting());
+			System.out.println(vo.getDestination());
+			
+			conn = JDBCUtil.getConnection();
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, vo.getStarting());
+			stmt.setString(2, vo.getDestination());
+			rs=stmt.executeQuery();
+			while(rs.next()){ 
+				TaxiVO list = new TaxiVO();
+				list.setSeq(rs.getString("seq"));
+				list.setTitle(rs.getString("title"));
+				list.setWriter(rs.getString("writer"));
+				list.setStarting(rs.getString("starting"));
+				list.setDestination(rs.getString("destination"));
+				list.setTime(rs.getString("time"));
+				list.setTimeHour(rs.getInt("timeHour"));
+				list.setTimeMinute(rs.getInt("timeMinute"));
+				list.setRegdate(rs.getDate("regdate"));
+				taxi.add(list);
+			}
+		}catch(Exception e){
+				e.printStackTrace();
+		}finally{
+				JDBCUtil.close(conn, stmt,rs);
+		}return taxi;
+		
+	}
+	
 	public TaxiVO getTaxi(TaxiVO vo){
 		String sql = "select * from taxi where seq=?";
 		

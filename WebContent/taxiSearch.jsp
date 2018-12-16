@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="ymaster.dao.TaxiDAO" %>
 <%@ page import="ymaster.vo.TaxiVO" %>
-<%@ page import="java.util.List" %> 
 <%@ page import="ymaster.vo.MemberVO" %>
+<%@ page import="java.util.List" %> 
 <%@ page import = "java.io.PrintWriter" %>
 <%
 	if(session.getAttribute("memberVO") == null) {
@@ -11,7 +11,7 @@
 	}
 
 	MemberVO mvo = (MemberVO) session.getAttribute("memberVO");
-		request.setCharacterEncoding("UTF-8");
+	request.setCharacterEncoding("UTF-8");
 
 String starting=request.getParameter("startingS");
 String destination = request.getParameter("destinationS");
