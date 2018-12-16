@@ -10,8 +10,9 @@
 	}
 
 	MemberVO mvo = (MemberVO) session.getAttribute("memberVO");
-	TaxiVO vo = new TaxiVO();
-	TaxiDAO dao = new TaxiDAO();
+
+TaxiVO vo = new TaxiVO();
+TaxiDAO dao = new TaxiDAO();
 	List<TaxiVO> list = dao.getTaxiList();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -26,6 +27,8 @@
 	</div>
 	<div align="center">
 	<h2>택시 마스터</h2><hr>
+
+
 <form action="taxiList.jsp" method="post">
 	 출발
 	<select name ="startingS">
@@ -79,6 +82,8 @@
 </table>
 </form>
 <br>
+
+		<input type="button" style="height:20pt;" value="로그아웃" onclick="location.href='logout.jsp'"/>
 </div>
 </body>
 </html>
